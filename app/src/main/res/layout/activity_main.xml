@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:id="@+id/line"
+            style="@style/horizontal_line_style"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:background="@color/bg_color_e2e3e3" />
+
+        <RadioGroup
+            android:id="@+id/rg_home_group"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/line"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_recommend"
+                style="@style/BottomTabStyle"
+                android:drawableTop="@drawable/btn_tab_recommend_selector"
+                android:text="热门"
+                android:textColor="@drawable/text_f57c00_909191_selector"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/rb_search"
+                style="@style/BottomTabStyle"
+                android:drawableTop="@drawable/btn_tab_search_selector"
+                android:text="订单"
+                android:textColor="@drawable/text_f57c00_909191_selector"
+                android:textSize="10sp" />
+
+
+            <RadioButton
+                android:id="@+id/rb_answer"
+                style="@style/BottomTabStyle"
+                android:drawableTop="@drawable/btn_tab_answer_selector"
+                android:text="发现"
+                android:textColor="@drawable/text_f57c00_909191_selector"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/rb_personal_center"
+                style="@style/BottomTabStyle"
+                android:drawableTop="@drawable/btn_tab_personal_center_selector"
+                android:text="我的"
+                android:textColor="@drawable/text_f57c00_909191_selector"
+                android:textSize="10sp" />
+        </RadioGroup>
+
+        <View
+            android:id="@+id/person_bottom_red"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/oval_red"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_view_pager"
+        android:layout_weight="1">
+
+    </android.support.v4.view.ViewPager>
+
+
+</RelativeLayout>
